@@ -1,0 +1,1 @@
+﻿SELECT TOP 1 * FROM auto ORDER BY ID ASC;
