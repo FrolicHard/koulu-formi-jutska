@@ -9,7 +9,6 @@ namespace Autokauppa.model
     public class Auto
     {
         private int id;
-
         private decimal hinta;
         private DateTime rekisteri_paivamaara;
         private decimal moottorin_tilavuus;

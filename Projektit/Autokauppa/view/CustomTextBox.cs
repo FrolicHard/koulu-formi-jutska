@@ -24,7 +24,6 @@ namespace Autokauppa
         {
             base.WndProc(ref m);
 
-
             switch (m.Msg)
             {
                 case 0xf:
@@ -42,9 +41,6 @@ namespace Autokauppa
             }
         }
 
-
-
-
         public CustomTextBox()
             : base()
         {
@@ -55,12 +51,10 @@ namespace Autokauppa
 
             textBorder.Location = new Point(10, 10);
             textBorder.Size = new Size(200, 50);
-            textRectangle.Location = new Point(textBorder.X + 2,
-                textBorder.Y + 2);
-            textRectangle.Size = new Size(textBorder.Size.Width - 2,
-                textBorder.Height - 2);
-
-            
+            textRectangle.Location = new Point(textBorder.X + 2, textBorder.Y + 2);
+               
+            textRectangle.Size = new Size(textBorder.Size.Width - 2, textBorder.Height - 2);
+                        
         }
 
         // Use DrawText with the current TextFormatFlags.
@@ -80,9 +74,6 @@ namespace Autokauppa
                 this.Parent.Text = "CustomTextBox Disabled";
             }
         }
-
-
-
         //Override mouse and focus events to draw
         //proper borders. Basically, set the color and Invalidate(),
         //In general, Invalidate causes a control to redraw itself.
