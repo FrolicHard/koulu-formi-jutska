@@ -59,7 +59,6 @@ namespace Autokauppa.model
                         new SqlParameter("@VaritID", newAuto.VariId),
                         new SqlParameter("@PolttoaineID", newAuto.PolttoaineId)
                     };
-
                     SqlCommand command = new SqlCommand(query, dbYhteys);
                     command.Parameters.AddRange(Parameters);
                     command.ExecuteNonQuery();
@@ -71,7 +70,6 @@ namespace Autokauppa.model
                 dbYhteys.Close();
                 throw e;
             }
-
         }
 
         public Auto ChooseAutoMax()
@@ -201,8 +199,6 @@ namespace Autokauppa.model
                 return null;
             }
             return null;
-
-
         }
 
         public Auto SelectPreviousAutoRow(int selectedID)
@@ -375,7 +371,6 @@ namespace Autokauppa.model
                     dbYhteys.Open();
 
                     SqlParameter par = new SqlParameter("id", selectedID);
-
                     string query = "DELETE FROM auto WHERE ID=@id;";
                     SqlCommand command = new SqlCommand(query, dbYhteys);
                     command.Parameters.Add(par);
