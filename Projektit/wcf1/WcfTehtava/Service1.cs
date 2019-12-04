@@ -12,20 +12,30 @@ namespace WcfTehtava
     {
         public string GetData(string value)
         {
-            return string.Format("You entered: {0}", value);
+            return string.Format("You said: {0}", value);
         }
 
-        public CompositeType GetDataUsingDataContract(CompositeType composite)
+        //public CompositeType GetDataUsingDataContract(CompositeType composite)
+        //{
+        //    if (composite == null)
+        //    {
+        //        throw new ArgumentNullException("composite");
+        //    }
+        //    if (composite.BoolValue)
+        //    {
+        //        composite.StringValue += "Suffix";
+        //    }
+        //    return composite;
+        //}
+        /// <summary>
+        /// laskee annettujen lukujen tuoln
+        /// </summary>
+        /// <param name="luku">eka kerrottava</param>
+        /// <param name="toinen"></param>
+        /// <returns></returns>
+        public int Tulo(int luku, int toinen)
         {
-            if (composite == null)
-            {
-                throw new ArgumentNullException("composite");
-            }
-            if (composite.BoolValue)
-            {
-                composite.StringValue += "Suffix";
-            }
-            return composite;
+            return luku * toinen;
         }
     }
 }

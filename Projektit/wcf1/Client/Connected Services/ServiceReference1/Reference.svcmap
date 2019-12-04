@@ -25,7 +25,6 @@
     <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="5386f7c2-8848-495e-8fdf-f231ae1ab262" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WcfTehtava/Service1/mex" />
     <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="1a94331a-14c0-4b50-a57d-d34b657fdeb2" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WcfTehtava/Service1/mex" />
     <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="180f66fc-9b43-46e1-bcc7-94694fb88105" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WcfTehtava/Service1/mex" />
-    <MetadataFile FileName="WcfTehtava.xsd" MetadataType="Schema" ID="313c7547-1831-40f5-b6b0-7047d2720c21" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WcfTehtava/Service1/mex" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

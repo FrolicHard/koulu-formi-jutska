@@ -5,11 +5,6 @@ VisualStudioVersion = 15.0.27004.2009
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfTehtava", "WcfTehtava\WcfTehtava.csproj", "{DE877416-AFE9-4D6F-8656-94402126D91E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client", "Client\Client.csproj", "{10F898E1-91FB-4BFF-8407-5A215EEC9C1E}"
-	ProjectSection(ProjectDependencies) = postProject
-		{DE877416-AFE9-4D6F-8656-94402126D91E} = {DE877416-AFE9-4D6F-8656-94402126D91E}
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,10 +15,6 @@ Global
 		{DE877416-AFE9-4D6F-8656-94402126D91E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DE877416-AFE9-4D6F-8656-94402126D91E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DE877416-AFE9-4D6F-8656-94402126D91E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{10F898E1-91FB-4BFF-8407-5A215EEC9C1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{10F898E1-91FB-4BFF-8407-5A215EEC9C1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{10F898E1-91FB-4BFF-8407-5A215EEC9C1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{10F898E1-91FB-4BFF-8407-5A215EEC9C1E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

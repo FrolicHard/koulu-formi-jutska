@@ -24,7 +24,19 @@ namespace Client
             string returnString;
 
             returnString = client.GetData(textBox1.Text);
-            label1.Text = returnString;
+            label5.Text = returnString;
+        }
+
+        private void ExcitingBtnClick(object sender, EventArgs e)
+        {
+            ServiceReference1.Service1Client client = new
+                ServiceReference1.Service1Client();
+            int returnValue;
+            int luku = int.Parse(textBox_EkaLuku.Text);
+            int toinen = int.Parse(textBox_TokaLuku.Text);
+
+            returnValue = client.Tulo(luku, toinen);
+            label4.Text = returnValue.ToString();
         }
     }
 }
