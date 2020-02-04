@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:53570/Service1.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:53570/Service1.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:53570/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/AutoWCF" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService1_InsertAutoDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertAutoDetails" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertAutoDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertAutoDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ConnectDatabase_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConnectDatabase" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ConnectDatabase_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConnectDatabaseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DisconnectDatabase_InputMessage">
+    <wsdl:part name="parameters" element="tns:DisconnectDatabase" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DisconnectDatabase_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DisconnectDatabaseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ChooseAutoMax_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChooseAutoMax" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ChooseAutoMax_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChooseAutoMaxResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ChooseAutoMin_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChooseAutoMin" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ChooseAutoMin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChooseAutoMinResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SelectNextAutoRow_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectNextAutoRow" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SelectNextAutoRow_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectNextAutoRowResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SelectPreviousAutoRow_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectPreviousAutoRow" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SelectPreviousAutoRow_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectPreviousAutoRowResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllAutoMakersFromDatabase_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllAutoMakersFromDatabase" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllAutoMakersFromDatabase_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllAutoMakersFromDatabaseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAutoModelsByMakerId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAutoModelsByMakerId" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAutoModelsByMakerId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAutoModelsByMakerIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllFuelsFromDatabase_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllFuelsFromDatabase" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllFuelsFromDatabase_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllFuelsFromDatabaseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetColorsFromDatabase_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetColorsFromDatabase" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetColorsFromDatabase_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetColorsFromDatabaseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteRowFromDatabase_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteRowFromDatabase" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteRowFromDatabase_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteRowFromDatabaseResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService1">
+    <wsdl:operation name="InsertAutoDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/InsertAutoDetails" message="tns:IService1_InsertAutoDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/InsertAutoDetailsResponse" message="tns:IService1_InsertAutoDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConnectDatabase">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ConnectDatabase" message="tns:IService1_ConnectDatabase_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ConnectDatabaseResponse" message="tns:IService1_ConnectDatabase_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DisconnectDatabase">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DisconnectDatabase" message="tns:IService1_DisconnectDatabase_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DisconnectDatabaseResponse" message="tns:IService1_DisconnectDatabase_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChooseAutoMax">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ChooseAutoMax" message="tns:IService1_ChooseAutoMax_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ChooseAutoMaxResponse" message="tns:IService1_ChooseAutoMax_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChooseAutoMin">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ChooseAutoMin" message="tns:IService1_ChooseAutoMin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ChooseAutoMinResponse" message="tns:IService1_ChooseAutoMin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectNextAutoRow">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/SelectNextAutoRow" message="tns:IService1_SelectNextAutoRow_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SelectNextAutoRowResponse" message="tns:IService1_SelectNextAutoRow_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectPreviousAutoRow">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/SelectPreviousAutoRow" message="tns:IService1_SelectPreviousAutoRow_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SelectPreviousAutoRowResponse" message="tns:IService1_SelectPreviousAutoRow_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllAutoMakersFromDatabase">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetAllAutoMakersFromDatabase" message="tns:IService1_GetAllAutoMakersFromDatabase_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetAllAutoMakersFromDatabaseResponse" message="tns:IService1_GetAllAutoMakersFromDatabase_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAutoModelsByMakerId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetAutoModelsByMakerId" message="tns:IService1_GetAutoModelsByMakerId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetAutoModelsByMakerIdResponse" message="tns:IService1_GetAutoModelsByMakerId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllFuelsFromDatabase">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetAllFuelsFromDatabase" message="tns:IService1_GetAllFuelsFromDatabase_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetAllFuelsFromDatabaseResponse" message="tns:IService1_GetAllFuelsFromDatabase_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetColorsFromDatabase">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetColorsFromDatabase" message="tns:IService1_GetColorsFromDatabase_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetColorsFromDatabaseResponse" message="tns:IService1_GetColorsFromDatabase_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRowFromDatabase">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DeleteRowFromDatabase" message="tns:IService1_DeleteRowFromDatabase_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeleteRowFromDatabaseResponse" message="tns:IService1_DeleteRowFromDatabase_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="InsertAutoDetails">
+      <soap:operation soapAction="http://tempuri.org/IService1/InsertAutoDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConnectDatabase">
+      <soap:operation soapAction="http://tempuri.org/IService1/ConnectDatabase" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DisconnectDatabase">
+      <soap:operation soapAction="http://tempuri.org/IService1/DisconnectDatabase" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChooseAutoMax">
+      <soap:operation soapAction="http://tempuri.org/IService1/ChooseAutoMax" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChooseAutoMin">
+      <soap:operation soapAction="http://tempuri.org/IService1/ChooseAutoMin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectNextAutoRow">
+      <soap:operation soapAction="http://tempuri.org/IService1/SelectNextAutoRow" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectPreviousAutoRow">
+      <soap:operation soapAction="http://tempuri.org/IService1/SelectPreviousAutoRow" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllAutoMakersFromDatabase">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetAllAutoMakersFromDatabase" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAutoModelsByMakerId">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetAutoModelsByMakerId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllFuelsFromDatabase">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetAllFuelsFromDatabase" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetColorsFromDatabase">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetColorsFromDatabase" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRowFromDatabase">
+      <soap:operation soapAction="http://tempuri.org/IService1/DeleteRowFromDatabase" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_IService1" binding="tns:BasicHttpBinding_IService1">
+      <soap:address location="http://localhost:53570/Service1.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/AutoWCF" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/AutoWCF" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="AutoDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AutonMalliID" type="xs:int" />
+      <xs:element minOccurs="0" name="AutonMerkkiID" type="xs:int" />
+      <xs:element minOccurs="0" name="Hinta" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Mittarinlukema" type="xs:int" />
+      <xs:element minOccurs="0" name="Moottorin_tilavuus" type="xs:decimal" />
+      <xs:element minOccurs="0" name="PolttoaineID" type="xs:int" />
+      <xs:element minOccurs="0" name="Rekisteri_pvm" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="VaritID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AutoDetails" nillable="true" type="tns:AutoDetails" />
+  <xs:complexType name="ArrayOfMerkkiDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MerkkiDetails" nillable="true" type="tns:MerkkiDetails" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMerkkiDetails" nillable="true" type="tns:ArrayOfMerkkiDetails" />
+  <xs:complexType name="MerkkiDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Merkki" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MerkkiDetails" nillable="true" type="tns:MerkkiDetails" />
+  <xs:complexType name="ArrayOfMalliDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MalliDetails" nillable="true" type="tns:MalliDetails" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMalliDetails" nillable="true" type="tns:ArrayOfMalliDetails" />
+  <xs:complexType name="MalliDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AutonMerkkiID" type="xs:int" />
+      <xs:element minOccurs="0" name="Auton_mallin_nimi" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MalliDetails" nillable="true" type="tns:MalliDetails" />
+  <xs:complexType name="ArrayOfPolttoaineDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PolttoaineDetails" nillable="true" type="tns:PolttoaineDetails" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPolttoaineDetails" nillable="true" type="tns:ArrayOfPolttoaineDetails" />
+  <xs:complexType name="PolttoaineDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Polttoaineen_nimi" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PolttoaineDetails" nillable="true" type="tns:PolttoaineDetails" />
+  <xs:complexType name="ArrayOfVariDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="VariDetails" nillable="true" type="tns:VariDetails" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfVariDetails" nillable="true" type="tns:ArrayOfVariDetails" />
+  <xs:complexType name="VariDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Varin_nimi" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="VariDetails" nillable="true" type="tns:VariDetails" />
+</xs:schema>
